@@ -16,9 +16,14 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(dosyaYoluP) {
+
+  const parcala = dosyaYoluP.split("/");
+  const dosyaAdi = parcala[parcala.length -1];
+  return  dosyaAdi;
+
 }
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 
 /*
   GÖREV 2
@@ -83,7 +88,10 @@ function ortalamaBul(){
      sayi= sayi+sayilar[i];
 
   }
-  return sayi/sayilar.length;
+  const c =sayi/sayilar.length;
+  
+  return c;
+  
 }
 console.log(ortalamaBul());
 
@@ -108,17 +116,22 @@ console.log(ortalamaBul());
 */
 
 function ortalamadanBuyukleriBul() {
+  const buyukler = sayilar.filter((a => a>= ortalamaBul()  ? a : null));
+   return buyukler;
   const büyükler =[];
-  for (let i=0;i<sayilar.length;i++){
+
+  /*for (let i=0;i<sayilar.length;i++){
 if (sayilar[i]>=ortalamaBul()){
 büyükler.push(sayilar[i]);
 
+}
+
+
 
 }
+return büyükler;*/
 }
-return büyükler;
- 
-}
+
 console.log(ortalamadanBuyukleriBul());
 
 
